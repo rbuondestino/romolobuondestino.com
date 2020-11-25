@@ -1,0 +1,259 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+    color: #1D1D1D;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 400;
+}
+
+h1, h2, h3, h4, h5, h6, p, li {
+    font-family: 'Yantramanav', sans-serif;
+    font-size: 18px;
+    line-height: 32px;
+
+    a {
+        color: #FF3B71;
+    }
+}
+
+p, li {
+    font-weight: 300;
+
+    strong {
+        font-weight: 400;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+
+    .col--3 {
+        flex-basis: 25%;
+        max-width: 25%;
+    }
+
+    .col--4 {
+        flex-basis: 33.33333333%;
+        max-width: 33.33333333%;
+    }
+
+    .col--6 {
+        flex-basis: 50%;
+        max-width: 50%;
+    }
+
+    .col--8 {
+        flex-basis: 66.66666667%;
+        max-width: 66.66666667%;
+    }
+}
+
+.spacer {
+    width: 100%;
+    height: 1px;
+    background-color: #E5E5E5;
+    margin-bottom: 148px;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 42px 64px 0;
+    @media screen and (max-width: 960px) {
+        padding: 42px 24px 0;
+    }
+
+    h1 {
+        font-size: 18px;
+        font-weight: 300;
+
+        strong {
+            font-weight: 400;
+        }
+    }
+
+    .icons {
+        display: flex;
+        height: 16px;
+
+        .icon {
+            height: 16px;
+            margin-right: 32px;
+            &:last-child {
+                margin-right: 0;
+            }
+            &:hover {
+                svg {
+                    path {
+                        fill: #FF3B71;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.introduction {
+    padding-top: 180px;
+    margin-bottom: 148px;
+    @media screen and (max-width: 960px) {
+        padding: 180px 24px 0;
+    }
+
+    p {
+        font-size: 30px;
+        line-height: 42px;
+        margin-bottom: 42px;
+        @media screen and (max-width: 767px) { 
+            font-size: 24px;
+            line-height: 32px;
+            margin-bottom: 32px;
+        }
+        &:last-child {
+            margin: 0;
+        }
+
+        strong {
+            font-weight: 400;
+        }
+    }
+}
+
+.work {
+    margin-bottom: 148px;
+
+    .container {
+        @media screen and (max-width: 960px) {
+            padding: 0 24px;
+        }
+        @media screen and (max-width: 767px) { 
+            flex-direction: column;
+
+            .col--4, .col--8 {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+    }
+
+    .work__image {
+        position: relative;
+        width: 100%;
+        height: 0;
+        background-color: #F3F3F3;
+        padding-bottom: 62.5%;
+        margin-bottom: 48px;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.experience, .skills, .uxmaster, .endorsements {
+    margin-bottom: 148px;
+
+    .container {
+        @media screen and (max-width: 960px) {
+            padding: 0 24px;
+        }
+        @media screen and (max-width: 767px) { 
+            flex-direction: column;
+
+            .col--4, .col--8 {
+                flex-basis: 100%;
+                max-width: 100%;
+            }
+        }
+
+        h3 {
+            font-size: 30px;
+            font-weight: 300;
+            line-height: 42px;
+            margin-bottom: 32px;
+            @media screen and (max-width: 767px) { 
+                font-size: 24px;
+                line-height: 32px;
+            }
+        }
+
+        p, ul {
+            margin-bottom: 32px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        img {
+            max-width: 180px;
+            margin-bottom: 32px;
+        }
+    }
+}
+
