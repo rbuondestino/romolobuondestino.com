@@ -23,28 +23,42 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
 body {
     color: #1D1D1D;
     line-height: 1;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+
 ol, ul {
 	list-style: none;
 }
+
 blockquote, q {
 	quotes: none;
 }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -260,3 +274,37 @@ a {
     }
 }
 
+.back-to-top {
+    position: fixed;
+    right: 48px;
+    bottom: 48px;
+    display: block;
+    width: 48px;
+    height: 48px;
+    text-align: center;
+    background-color: transparent;
+    padding: 19px 0;
+    transition: all .35s ease-in-out;
+    cursor: pointer;
+    @media screen and (max-width: 767px) {
+        right: 16px;
+    }
+
+    &:hover {
+        svg {
+            path {
+                stroke: #FF3B71;
+            }
+        }
+    }
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &.hide {
+        opacity: 0;
+        visibility: hidden;
+    }
+}

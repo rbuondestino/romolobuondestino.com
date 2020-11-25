@@ -263,6 +263,40 @@
                 </div>
             </div>
         </section>
+
+        <a id="back-to-top" class="back-to-top hide">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25.387" height="9.193" viewBox="0 0 25.387 9.193"><g transform="translate(0.193 -5)"><path d="M24.5,13.5l-12-8-12,8" fill="none" stroke="#1d1d1d" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1"/></g></svg>
+        </a>
     </div>
+
+    <script>
+        const scrollToTopButton = document.getElementById('back-to-top');
+
+        const scrollFunc = () => {
+            let y = window.scrollY;
+
+            if (y > 640) {
+                scrollToTopButton.className = "back-to-top show";
+            } else {
+                scrollToTopButton.className = "back-to-top hide";
+            }
+        };
+
+        window.addEventListener("scroll", scrollFunc);
+
+        const scrollToTop = () => {
+            const c = document.documentElement.scrollTop || document.body.scrollTop;
+
+            if (c > 0) {
+                window.requestAnimationFrame(scrollToTop);
+                window.scrollTo(0, c - c / 10);
+            }
+        };
+
+        scrollToTopButton.onclick = function(e) {
+            e.preventDefault();
+            scrollToTop();
+        }
+    </script>
 </body>
 </html>
