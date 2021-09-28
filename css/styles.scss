@@ -72,6 +72,9 @@ h1, h2, h3, h4, h5, h6, p, li {
     font-family: 'Yantramanav', sans-serif;
     font-size: 22px;
     line-height: 32px;
+    @media screen and (max-width: 1280px) {
+        font-size: 18px;
+    }
 
     a {
         color: #FF3B71;
@@ -143,6 +146,9 @@ a {
         font-size: 20px;
         font-weight: 300;
         line-height: 20px;
+        @media screen and (max-width: 1280px) {
+            font-size: 16px;
+        }
 
         strong {
             font-weight: 400;
@@ -164,7 +170,7 @@ a {
                 width: auto;
                 height: 20px;
             }
-            
+
             &:hover {
                 svg {
                     path {
@@ -212,6 +218,9 @@ a {
     width: 100%;
     max-width: 50%;
     margin-bottom: 148px;
+    @media screen and (max-width: 1280px) {
+        max-width: 100%;
+    }
 
     .container {
         padding: 0 72px;
