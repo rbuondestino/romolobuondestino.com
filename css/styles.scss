@@ -219,11 +219,13 @@ a {
     width: 100%;
     max-width: 50%;
     margin-bottom: 148px;
+    margin-bottom: 0; //temp
     @media screen and (max-width: 1280px) {
         max-width: 100%;
     }
 
     .container {
+        display: none; //temp
         padding: 0 72px;
         @media screen and (max-width: 1440px) {
             padding: 0 40px;
@@ -249,6 +251,7 @@ a {
         background-color: #F3F3F3;
         padding-bottom: 62.5%;
         margin-bottom: 48px;
+        margin-bottom: 0; //temp
 
         img {
             position: absolute;
