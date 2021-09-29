@@ -129,6 +129,10 @@ a {
     height: 1px;
     background-color: #E5E5E5;
     margin-bottom: 148px;
+
+    &.spacer--transparent {
+        opacity: 0;
+    }
 }
 
 .header {
